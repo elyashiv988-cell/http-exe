@@ -52,7 +52,9 @@ def get_weather(city):
         corrent_time = datetime.now().hour
         last_update_time = stored_data["last_updated"]
         last_update_city = stored_data ['location']["name"]
+        
         if corrent_time - last_update_time < 5 and city.upper() == last_update_city.upper():
+
             data_wether = stored_data
             
         else:
